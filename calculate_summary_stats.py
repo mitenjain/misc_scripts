@@ -6,6 +6,7 @@ import os, sys, time
 import numpy
 import gzip
 from optparse import OptionParser
+from __future__ import print_function
 
 ########################################################################
 # Main
@@ -38,9 +39,12 @@ def main(myCommandLine=None):
             file = open(inFile, 'r')
 
         header = file.readline()
+        header = header.strip().split()
+        length_index = header.index("sequence_length_template")
+
         for line in file:
             line = line.strip().split()
-            length = int(line[13])
+            length = int(line[length_index])
             read_length.append(length)
             bases += length
         file.close()
