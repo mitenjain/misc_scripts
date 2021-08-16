@@ -2,11 +2,11 @@
 # Miten Jain (mjain3@ucsc.edu)
 # calculate_summary_stats.py
 
+from __future__ import print_function
 import os, sys, time
 import numpy
 import gzip
 from optparse import OptionParser
-from __future__ import print_function
 
 ########################################################################
 # Main
