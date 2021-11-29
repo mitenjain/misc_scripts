@@ -34,7 +34,7 @@ def main(myCommandLine=None):
     bases = 0
     for inFile in inFile_list:
         if inFile.endswith('.gz'):
-            file = gzip.open(inFile,'r')
+            file = gzip.open(inFile,'rt')
         else:
             file = open(inFile, 'r')
 
